@@ -1,6 +1,6 @@
 const { JSDOM } = require("jsdom");
 
-async function crawlPage(baseURL, currentURL = baseURL, pages = {}) {
+async function crawlPage(baseURL, currentURL, pages) {
   const baseURLObject = new URL(baseURL);
   const currentURLObject = new URL(currentURL);
   if (baseURLObject.hostname !== currentURLObject.hostname) {
@@ -34,7 +34,6 @@ async function crawlPage(baseURL, currentURL = baseURL, pages = {}) {
       pages = await crawlPage(baseURL, nextURL, pages);
     }
   } catch (err) {
-    console.log(err);
     console.log(`error in fetch: ${err.message}, on page: ${currentURL}`);
   }
   return pages;
