@@ -1,0 +1,15 @@
+{
+  "name": "javascript-webcrawler",
+  "version": "1.0.0",
+  "description": "SEO link analyser",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "jest"
+  },
+  "author": "cpwilson87",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
